@@ -1,88 +1,41 @@
-<!DOCTYPE html>
-<html>
 <head>
-  <meta charset='utf-8'>
-
-  <title>apstewar/figureditout @ GitHub</title>
-
-  <style type="text/css">
-    body {
-      margin-top: 1.0em;
-      background-color: #ffffff;
-      font-family: Helvetica, Arial, FreeSans, san-serif;
-      color: #000000;
-    }
-    #container {
-      margin: 0 auto;
-      width: 700px;
-    }
-    h1 { font-size: 3.8em; color: #000000; margin-bottom: 3px; }
-    h1 .small { font-size: 0.4em; }
-    h1 a { text-decoration: none }
-    h2 { font-size: 1.5em; color: #000000; }
-    h3 { text-align: center; color: #000000; }
-    a { color: #000000; }
-    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
-    .download { float: right; }
-    pre { background: #000; color: #fff; padding: 15px;}
-    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
-    .footer { text-align:center; padding-top:30px; font-style: italic; }
-  </style>
+<title>I figured it out!</title>
+<style type="text/css">
+p {
+  display: block;
+  text-align:center;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+}
+.script_small {
+  font-size: 24px;
+}
+.script_big {
+  font-size: 64px;
+}
+</style>
 </head>
 
 <body>
-  <a href="https://github.com/apstewar/figureditout"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+<div id="script">
+<p class="script_small" id="intro"></p>
+<p class="script_big" id="reason"></p>
+<p class="script_small" id="bridge"></p>
+<p class="script_big" id="result"></p>
+</div>
+<script type="text/javascript">
+var intros = ["The service wasn't down, it was a ", "The crash was not a bug, but there was a ", "Data corruption was a result of a"];
 
-  <div id="container">
+var reasons = ["cache inconsistency", "transient network problem", "fluke", "Heisenbug", "compiler error", "build script failure", "CDN bug", "Thrift quirk", "heap corruption", "erratic clean-up script", "glut of /tmp files", "clock skew", "low entropy random number generator", "solar ray"];
 
-    <div class="download">
-      <a href="https://github.com/apstewar/figureditout/zipball/master">
-        <img border="0" width="90" src="https://github.com/images/modules/download/zip.png"></a>
-      <a href="https://github.com/apstewar/figureditout/tarball/master">
-        <img border="0" width="90" src="https://github.com/images/modules/download/tar.png"></a>
-    </div>
+var bridges = ["that caused", "resulting in", "coincident with", "which evolved into"];
 
-    <h1><a href="https://github.com/apstewar/figureditout">figureditout</a>
-      <span class="small">by <a href="https://github.com/apstewar">apstewar</a></span></h1>
+var results = ["a spike of timeouts", "hard drive failure", "connection failures", "a day-long service outage", "a datacenter fire", "melting Ethernet cables", "router failure", "all page loads fataling", "elevated page generation time", "a simultaneous tier crash", "dropping half of the DB tables"];
 
-    <div class="description">
-      Troll for making excuses for programming errors
-    </div>
-
-    
-
-    
-
-    
-
-    
-
-    
-      <h2>Authors</h2>
-      <p>Your Name (alstew007@gmail.com)<br/>      </p>
-    
-
-    
-      <h2>Contact</h2>
-      <p> (alstew007@gmail.com)<br/>      </p>
-    
-
-    <h2>Download</h2>
-    <p>
-      You can download this project in either
-      <a href="https://github.com/apstewar/figureditout/zipball/master">zip</a> or
-      <a href="https://github.com/apstewar/figureditout/tarball/master">tar formats.
-    </p>
-    <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
-      by running:
-      <pre>$ git clone git://github.com/apstewar/figureditout</pre>
-    </p>
-
-    <div class="footer">
-      get the source code on GitHub : <a href="https://github.com/apstewar/figureditout">apstewar/figureditout</a>
-    </div>
-
-  </div>
-
+var indexrand = function(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
+document.getElementById("intro").innerHTML = indexrand(intros);
+document.getElementById("reason").innerHTML = indexrand(reasons);
+document.getElementById("bridge").innerHTML = indexrand(bridges);
+document.getElementById("result").innerHTML = indexrand(results);
+</script>
 </body>
-</html>
